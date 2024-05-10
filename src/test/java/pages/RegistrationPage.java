@@ -10,9 +10,8 @@ import static com.codeborne.selenide.Condition.hidden;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.Selenide.executeJavaScript;
 
-public class RegistrationPage {
+public class RegistrationPage extends TestBasePage {
     private final SelenideElement firstNameInput = $("#firstName"),
             lastNameInput = $("#lastName"),
             userEmailInput = $("#userEmail"),
@@ -34,8 +33,7 @@ public class RegistrationPage {
     public RegistrationPage openPage() {
         open("automation-practice-form");
         $(".practice-form-wrapper").shouldHave(text("Student Registration Form"));
-        executeJavaScript("$('footer').remove();");
-        executeJavaScript("$('#fixedban').remove();");
+        this.removeBanners();
         return this;
     }
 
