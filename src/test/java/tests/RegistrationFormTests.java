@@ -21,7 +21,7 @@ public class RegistrationFormTests extends TestBase {
                 .setDateOfBirth("9", "September", "1991")
                 .setSubjectsInput(subjects)
                 .setHobbies(hobbies)
-                .uploadPicture("src/test/resources/comma.jpg")
+                .uploadPicture("comma.jpg")
                 .setCurrentAddress("Test address")
                 .setState("Rajasthan")
                 .setCity("Jaiselmer")
